@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bmi_claculator/screens/home_screen.dart';
+import 'package:flutter_bmi_claculator/screens/loading_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'dana'), // dana is default font for this app
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const LoadingScreen(),
     );
   }
 }
