@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi_claculator/constants/constants.dart';
+import 'package:flutter_bmi_claculator/widgets/bmi_chart.dart';
 import 'package:flutter_bmi_claculator/widgets/calculate_button.dart';
 import 'package:flutter_bmi_claculator/widgets/horizontal_shape.dart';
 import 'package:flutter_bmi_claculator/widgets/widgets.dart';
@@ -22,11 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        backgroundColor: backgroundColor,
         centerTitle: true,
         title: Text(
           'تو چنده؟ BMI',
-          style: TextStyle(color: blackcolor, fontSize: 24),
+          style: TextStyle(color: Colors.white, fontSize: 24),
         ),
         actions: [
           IconButton(
@@ -115,6 +118,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 text: 'شاخص مثبت',
                 shapeWidth: widthgood,
               ),
+              const SizedBox(height: 35),
+              getBMIChart(),
+              const SizedBox(height: 65),
+              getDescription(),
             ],
           ),
         ),

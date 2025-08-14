@@ -97,7 +97,7 @@ class getBMIResult extends StatelessWidget {
       style: const TextStyle(
         fontSize: 55,
         fontWeight: FontWeight.bold,
-        color: Colors.black,
+        color: Colors.white,
       ),
     );
   }
@@ -121,6 +121,36 @@ class getWeightAndHeighBox extends StatelessWidget {
         getTextField(weightcontroller, '(کیلوگرم)وزن'),
         getTextField(heightcontroller, '(سانتی‌متر)قد'),
       ],
+    );
+  }
+}
+
+class getDescription extends StatelessWidget {
+  const getDescription();
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 35,
+      child: const Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Powered by flutter',
+            style: TextStyle(
+              color: Color.fromARGB(255, 3, 142, 255),
+              fontSize: 10,
+            ),
+          ),
+          Text(
+            'Mtiw_dev',
+            style: TextStyle(
+              color: Color.fromARGB(255, 3, 142, 255),
+              fontSize: 10,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
